@@ -25,76 +25,107 @@
             </head>
 <p>&nbsp;</p>
 <ul>
-	<li><strong>Introduction</strong></li>
-	<li><strong>Document Conventions</strong></li>
-	<li><strong>Description of Design Components</strong>
-		<ul>
-			<li>You should have broken down your entire design into components (Server-side,</li>
-			<li>Client-Side e.g mobile, third party services). Give descriptions of each component</li>
-		</ul>
-	</li>
-	<li><strong>High-Level Component Design</strong>
+	<li><strong>1.Introduction</strong></li>
+	<li><strong>2.Document Conventions</strong></li>
+	<h2><strong>Description of Design Components</strong></h2>
+		<h4> 3.1 Components Overview </h4>
+		<p>
+		 We will be giving a basic overview of the various components to be used in our system.
+		</p>
+		<h4> 3.2 Database </h4>
+		<p> SqLite will be used as our database software for Hand held software application and PostgreSQL will be used for our web applications. To represent various data from our project, we will be using tables included within the database software. </p>
+	</p>
+		<h4> 3.3 Server Software </h4>
+			<p>
+			Through our server software, we will be able to directly manipulate the contents of our database system based on commands provided from the server procedure proxy.
+			</p>
+
+			<h4> 3.4 Server procedure proxy </h4>
+			<p>
+			we will be provided an interface for us to request information or submit updates to the server through the server procedure proxy. The clients (Teacher) will be given limited access to the server so that they can update the contents._
+			</p>
+
+			<h4> 3.5 Client Software </h4>
+			<p>
+				The client software on which we will present our project will either be on a desktop computer or a hand held device. The software will have two general purposes so that the users can easily update information on the project. Our users will mainly consist of two variants, (Teacher and Student). So for this the software will mainly consist of two interface to accomodate the two different variants.
+
+			<ul>
+			<li>
+				<strong> Hand held Client Software </strong>
+				<br>
+				 The hand held client software will allow both type of users to view their varient of the software and they can also make changes and updates relevent to the inteface assign to them.
+				</li>
+
+				<br>
+				<li>
+				<strong> Desktop Client Software </strong>
+				<br>
+				The Desktop client software will allow both type of users to view their varient of the software and they can also make changes and updates relevent to the inteface assign to them.
+				</li>
+			<br>
+			</ul>
+		</p>
+
+	<h3><strong>4. High-Level Component Design</strong></h3>
 		<ul>
 			<li>Show which component depends on what other components</li>
 		</ul>
 	</li>
-	<li><strong>Class diagrams</strong>
-		<h4><b>Class Name:</b>Registration class</h4>
+	<h3><strong>5.Class diagrams</strong></h3>
+	<p><img src="contents_SDS\UML\ClassDiagram.jpg">
+		<h3><b>5.1 Class Name:</b>Registration class</h3>
 		<p><b>Purpose: </b>Students and teacher both are responsible for maintaining an aacurate registration record. Students are to arrange to meet with their academic advisor through registration class. In registration class there are some attributes such as fullName,email,username,password,conPass. This class also have some methods. </p>
-		<p>&emsp;<b>Attribute:</b></p>
-		<ul>
-			<li>&emsp;&emsp;<b>Name:</b> fullName
-			<br>&emsp;&emsp;<b>Type:</b> string
-			<br>&emsp;&emsp;<b>Purpose:</b> It decleared the user's full name. 
+		<h3>&emsp;5.1.1 Attribute</h3>
+		<ol>
+			<li><b>Name:</b> fullName
+			<br><b>Type:</b> string
+			<br><b>Purpose:</b> It decleared the user's full name. 
+		</li><br>
+			<li><b>Name:</b> email
+			<br><b>Type:</b> string
+			<br><b>Purpose:</b> It decleared the user's email.
+			</li><br>
+			<li><b>Name:</b> username
+			<br><b>Type:</b> string
+			<br><b>Purpose:</b> It decleared the user's name.
+		</li><br>
+		   <li><b>Name:</b> password
+			<br><b>Type:</b> string
+			<br><b>Purpose:</b> It decleared the user's password.
+		   </li><br>
+			<li><b>Name:</b> conPass
+			<br><b>Type:</b> string
+			<br><b>Purpose:</b> It decleared the confirmation of user's password.
 		</li>
-			<li>&emsp;&emsp;<b>Name:</b> email
-			<br>&emsp;&emsp;<b>Type:</b> string
-			<br>&emsp;&emsp;<b>Purpose:</b> It decleared the user's email.
-			</li>
-			<li>&emsp;&emsp;<b>Name:</b> username
-			<br>&emsp;&emsp;<b>Type:</b> string
-			<br>&emsp;&emsp;<b>Purpose:</b> It decleared the user's name.
-		</li>
-		   <li>&emsp;&emsp;<b>Name:</b> password
-			<br>&emsp;&emsp;<b>Type:</b> string
-			<br>&emsp;&emsp;<b>Purpose:</b> It decleared the user's password.
-		   </li>
-			<li>&emsp;&emsp;<b>Name:</b> conPass
-			<br>&emsp;&emsp;<b>Type:</b> string
-			<br>&emsp;&emsp;<b>Purpose:</b> It decleared the confirmation of user's password.
-		</li>
-
-
 		
-	</ul>
+	</ol>
 
-	<li><strong>The following for each public method</strong>
-            <p>&emsp;<b> Public Methods:</b></p>
+            <h3>&emsp;<b>5.1.2 Methods</b></h3>
 		<ul>
-			<li>&emsp;&emsp;<b>Name</b> username
-			<br>&emsp;&emsp;<b>Parameters</b>(username, string and it calls the username)
-			<br>&emsp;&emsp;<b>Return type</b> string
-			<br>&emsp;&emsp;<b>Purpose and description</b> It decleared the username. In every registration every person has specific user name.
-		</li>
-		<li>&emsp;&emsp;<b>Name</b> password
-			<br>&emsp;&emsp;<b>Parameters</b>(password, string and it calls the user's password)
-			<br>&emsp;&emsp;<b>Return type</b> string
-			<br>&emsp;&emsp;<b>Purpose and description</b> It decleared user's password. Every user has different password.
-		</li>
-		<li>&emsp;&emsp;<b>Name</b> conPass
-			<br>&emsp;&emsp;<b>Parameters</b>(conPass, string and it calls confirm password)
-			<br>&emsp;&emsp;<b>Return type</b> string
-			<br>&emsp;&emsp;<b>Purpose and description</b> It decleared the confirmation of password. When a user can give their password then there are another options fpr confirmation password.
-		</li>
-		<li>&emsp;&emsp;<b>Name</b> email
-			<br>&emsp;&emsp;<b>Parameters</b>(email, string and it calls the user email)
-			<br>&emsp;&emsp;<b>Return type</b> string
-			<br>&emsp;&emsp;<b>Purpose and description</b> It decleared user's email. Every user has specific email address for their own. They can use their email address in the registration form.
+			<li><b>Name:</b> username
+			<br><b>Parameters:</b>(username, string and it calls the username)
+			<br><b>Return type:</b> string
+			<br><b>Purpose and description:</b> It decleared the username. In every registration every person has specific user name.
+		</li><br>
+		<li><b>Name:</b> password
+			<br><b>Parameters:</b>(password, string and it calls the user's password)
+			<br><b>Return type:</b> string
+			<br><b>Purpose and description:</b> It decleared user's password. Every user has different password.
+		</li><br>
+		<li>&<b>Name:</b> conPass
+			<br><b>Parameters:</b>(conPass, string and it calls confirm password)
+			<br><b>Return type:</b> string
+			<br><b>Purpose and description:</b> It decleared the confirmation of password. When a user can give their password then there are another options fpr confirmation password.
+		</li><br>
+		<li><b>Name:</b> email
+			<br><b>Parameters:</b>(email, string and it calls the user email)
+			<br><b>Return type:</b> string
+			<br><b>Purpose and description:</b> It decleared user's email. Every user has specific email address for their own. They can use their email address in the registration form.
 		</li>
 	</li>
-	<p>class name: <student>
-	<br><p>class purposes:<in this class it has student informations.in student information we have some atrribute this are id,name,class enrollment>
-	<br><p>Atrribute<id,name,class enrollment>
+	<h3>5.2 Class name: student
+	<p>Class purposes:in this class it has student informations.in student information we have some atrribute this are id,name,class enrollment</p>
+	<h3>&emsp;5.2.1 Atrribute</h3>
 	<ul>
 		<li> Name: id
 			<br>Type: intlong
@@ -111,7 +142,7 @@
 		</li>
 
 	</ul>
-	<p>Method<contructor>
+	<h3>5.2.2.Method</h3>
 	<ul>
 	<li>	 Name:constructor
 	 	<br>Parameters:id,name
@@ -120,7 +151,7 @@
 		</li>
 	</ul>
 		</li>
-	<p>class name: <teacher>
+	<h3>class name: teacher</h3>
 	<br><p>class purposes:<in this class it has teacher informations.in teacher information we have some atrribute this are id,name,class enrollment,qualification>
 	<br><p>Atrribute<id,name,class enrollment>
 	<ul>
