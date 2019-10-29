@@ -25,9 +25,20 @@
             </head>
 <p>&nbsp;</p>
 <ul>
-	<li><strong>1.Introduction</strong> <p>In this product a instructor can track how long a student can read by tracking eyes using AI. In this SDS we can draw the UML diagram. we draw our classes and know all of the attributes and their methods. By using this UML diagram we can reach to our goal. In this product we use login, registration, user, session etc classes. Both the teacher and students are benificial from this product. There are group of different files and folder. We connected all the classes in UML diagram.We also organize our associations in profiles and automatically scan monitoredfolders at a defined time interval.</p></li>
-	<li><strong>2.Document Conventions</strong></li>
-	<h2><strong>Description of Design Components</strong></h2>
+	<h3>1.Introduction</h3>
+	 <p>In this product a instructor can track how long a student can read by tracking eyes using AI. In this SDS we
+	  can draw the UML diagram. we draw our classes and know all of the attributes and their methods. By using this UML 
+	  diagram we can reach to our goal. In this product we use login, registration, user, session etc classes. Both the 
+	  teacher and students are benificial from this product. There are group of different files and folder. We connected 
+	  all the classes in UML diagram.We also organize our associations in profiles and automatically scan monitoredfolders
+	  at a defined time interval.
+	</p>
+	<h3>2.Document Conventions</h3>
+	<p>
+
+	</p>
+
+	<h3>3. Description of Design Components</h3>
 		<h4> 3.1 Components Overview </h4>
 		<p>
 		 We will be giving a basic overview of the various components to be used in our system.
@@ -72,11 +83,17 @@
 		</ul>
 	</li>
 	<h3><strong>5.Class diagrams</strong></h3>
-	<p><img src="contents_SDS\UML\ClassDiagram.jpg">
-		<h3><b>5.1 Class Name:</b>Registration class</h3>
-		<p><b>Purpose: </b>Students and teacher both are responsible for maintaining an aacurate registration record. Students are to arrange to meet with their academic advisor through registration class. In registration class there are some attributes such as fullName,email,username,password,conPass. This class also have some methods. </p>
-		<h3>&emsp;5.1.1 Attribute</h3>
-		<ol>
+	<p><img src="contents_SDS\UML\ClassDiagram.jpg"></p>
+
+		<h4>5.1 Class Name: Registration class</h4>
+
+		<p><b>Purpose: </b>Students and teacher both are responsible for maintaining an aacurate registration<br>
+		 record. Students are to arrange to meet with their academic advisor through registration class. In <br>
+		 registration class there are some attributes such as fullName,email,username,password,conPass. This <br>
+		 class also have some methods. </p>
+
+		<h4>&emsp;5.1.1 Attribute</h4>
+		<p><ol>
 			<li><b>Name:</b> fullName
 			<br><b>Type:</b> string
 			<br><b>Purpose:</b> It decleared the user's full name. 
@@ -98,129 +115,156 @@
 			<br><b>Purpose:</b> It decleared the confirmation of user's password.
 		</li>
 		
-	</ol>
+	</ol></p>
 
-            <h3>&emsp;<b>5.1.2 Methods</b></h3>
-		<ul>
+            <h4>&emsp;<b>5.1.2 Methods</b></h4>
+		<p><ol>
 			<li><b>Name:</b> username
 			<br><b>Parameters:</b>(username, string and it calls the username)
 			<br><b>Return type:</b> string
 			<br><b>Purpose and description:</b> It decleared the username. In every registration every person has specific user name.
-		</li><br>
-		<li><b>Name:</b> password
+			</li>
+
+			<li><b>Name:</b> password
 			<br><b>Parameters:</b>(password, string and it calls the user's password)
 			<br><b>Return type:</b> string
 			<br><b>Purpose and description:</b> It decleared user's password. Every user has different password.
-		</li><br>
-		<li>&<b>Name:</b> conPass
+			</li>
+
+			<li><b>Name:</b> conPass
 			<br><b>Parameters:</b>(conPass, string and it calls confirm password)
 			<br><b>Return type:</b> string
 			<br><b>Purpose and description:</b> It decleared the confirmation of password. When a user can give their password then there are another options fpr confirmation password.
-		</li><br>
-		<li><b>Name:</b> email
+			</li>
+
+			<li><b>Name:</b> email
 			<br><b>Parameters:</b>(email, string and it calls the user email)
 			<br><b>Return type:</b> string
 			<br><b>Purpose and description:</b> It decleared user's email. Every user has specific email address for their own. They can use their email address in the registration form.
 		</li>
+	</ol>
+	<h3>5.2 Class name: Student</h3>
+	<p><b>Purposes:</b>In this class it has student informations.In student information we have some atrribute this are id,name,class enrollment</p>
+	<h4>&emsp;5.2.1 Atrribute</h4>
+	<p><ol>
+		<li><b>Name:</b> id
+		<br><b>Type:</b> intlong
+		<br><b>Purpoes:</b> it declare student id
+		</li>
+
+		<li><b> Name:</b> name 
+		<br><b>Type:</b> string
+		<br><b>Purpoes:</b>it declare student name
+		</li>
+
+		<li><b> Name:</b> class enrollment
+		<br><b>Type:</b> string
+		<br><b>Purpoes:</b> it declare class enrollment
+		</li>
+	</ol></p>
+
+	<h4>&emsp;5.2.2.Method</h4>
+	<p><ol>
+		<li><b> Name:</b> constructor
+		<br><b>Parameters:</b>id,name
+		<br><b>Return Type:</b>void
+		<br><b>Purpose and description:</b>it declare the costructor method
+		</li>
+	</ol></p>
+
+	<h3>5.3 class name: Teacher</h3>
+	<p><b>Purposes:</b>In this class it has teacher informations.in teacher information we have some atrribute this are id,name,class enrollment,qualification.
+	</p>
+	<h4>&emsp;5.3.1 Atrribute</h4>
+	<p><ol>
+		<li><b>Name:</b> id
+		<br><b>Type:</b> intlong
+		<br><b>Purpoes:</b> it declare teacher id
+		</li>
+
+		<li><b> Name:</b> name 
+		<br><b>Type:</b> string
+		<br><b>Purpoes:</b>it declare teacher name
+		</li>
+
+		<li><b> Name:</b> class enrollment
+		<br><b>Type:</b> string
+		<br><b>Purpoes</b>:it declare class enrollment
+		</li>
+
+		<li><b> Name: </b>qualification
+		<br><b>Type:</b> string
+		<br><b>Purpoes:</b> it declare qualification
+     	</li>
+	</ol></p>
+
+	<h4>&emsp;5.3.2 Method</h4>
+		<p><ol>
+		<li> <b>Name:</b>constructor
+	 	<br><b>Parameters:</b>name,id
+		<br><b>Return Type:</b>void
+		<br><b>Purpose and description:</b>it declare the costructor method	
+		</li>
+	</ol></p>
+
+	<h3>5.4 Class name: ToRead</h3>
+	<p><b>Purposes:</b>in this class it has file uploading informations.in this class we have some atrribute this are id,fileid</p>
+
+	<h4>&emsp;5.4.1 Atrribute</h4>
+	<p><ol>
+		<li><b>Name:</b> id
+		<br><b>Type:</b> intlong
+		<br><b>Purpoes:</b> it declare toread/uploaded file
+		</li>
+
+		<li> <b>Name:</b> fileid 
+		<br><b>Type:</b> long
+		<br><b>Purpoes:</b> it declare fileid	
+    	</li>
+	</ol></p>
+
+	<h4>&emsp;5.4.2 Method</h4>
+	<p><ol>
+	<li> <b>Name:</b>constructor
+	 	<br><b>Parameters:</b> Default
+		<br><b>Return Type:</b> 
+		<br><b>Purpose and description:</b>
 	</li>
-	<h3>5.2 Class name: student
-	<p>Class purposes:in this class it has student informations.in student information we have some atrribute this are id,name,class enrollment</p>
-	<h3>&emsp;5.2.1 Atrribute</h3>
-	<ul>
-		<li> Name: id
-			<br>Type: intlong
-			<br>Purpoes: it declare student id
-		</li>
-		<li> Name: name 
-			<br>Type: string
-			<br>Purpoes:it declare student name
-		</li>
-		<li> Name: class enrollment
-			<br>Type: string
-			<br>Purpoes:it declare class enrollment
-
-		</li>
-
-	</ul>
-	<h3>5.2.2.Method</h3>
-	<ul>
-	<li>	 Name:constructor
-	 	<br>Parameters:id,name
-			<br>Return Type:void
-			<br>Purpose and description:it declare the costructor method
-		</li>
-	</ul>
-		</li>
-	<h3>class name: teacher</h3>
-	<br><p>class purposes:<in this class it has teacher informations.in teacher information we have some atrribute this are id,name,class enrollment,qualification>
-	<br><p>Atrribute<id,name,class enrollment>
-	<ul>
-		<li> Name: id
-			<br>Type: intlong
-			<br>Purpoes: it declare teacher id
-		</li>
-		<li> Name: name 
-			<br>Type: string
-			<br>Purpoes:it declare teacher name
-		</li>
-		<li> Name: class enrollment
-			<br>Type: string
-			<br>Purpoes:it declare class enrollment
-
-		</li>
-		<li> Name: qualification
-			<br>Type: string
-			<br>Purpoes:it declare qualification
-
-     <li/>
-	</ul>
-	<p>Method<constructor>
-	<ul>
-	<li>	 Name:constructor
-	 	<br>Parameters:name,id
-			<br>Return Type:void
-			<br>Purpose and description:it declare the costructor method
-		
-		</li>
-	</ul>
+		<li><b>Name:</b>
+	 	<br><b>Parameters:</b>
+		<br><b>Return Type:</b>
+		<br><b>Purpose and description:</b>
 	</li>
-	<p>class name: <toread>
-	<br><p>class purposes:<in this class it has file uploading informations.in this class we have some atrribute this are id,fileid>
-	<br><p>Atrribute<id,fileid>
-	<ul>
-		<li> Name: id
-			<br>Type: intlong
-			<br>Purpoes: it declare toread/uploaded file
-		</li>
-		<li> Name: fileid 
-			<br>Type: long
-			<br>Purpoes:it declare fileid
+</ol></p>
+
+<h3>5.5 Class name: User</h3>
+<p><b>Purposes:
+</b></p>
+<p>
+	
+</p>
+
+<h4>&emsp;5.5.1 Attributes</h4>
+	<p>
+	<ol>
+	</ol>
 		
-     </li>
-	</ul>
-	<p>Method<contructor,fetchfromlocalrepo,tovalidation,toupload>
-	<ul>
-	<li>	 Name:constructor
-	 	<br>Parameters:default
-			<br>Return Type:void
-			<br>Purpose and description:it declare the costructor method
+	</p>
 
-			<li>	 Name:fetchfromlocalrepo
-	 	<br>Parameters:options,repository
-			<br>Return Type:void
-			<br>Purpose and description:it declare the fetchfromlocalrepo method
+<h4>&emsp;5.5.2 Method</h4>
+<p>
+<ol>
+	<li><b>Name:</b> ToValidation
+	<br><b>Parameters:</b> Default
+	<br><b>Return Type:</b>bool
+	<br><b>Purpose and description:</b> It declare tovalidation method.
+	</li>
+</ol>
+</p>
 
-<li>	 Name:tovalidation
-	 	<br>Parameters:
-			<br>Return Type:bool
-			<br>Purpose and description:it declare tovalidation method
-
-<li>	 Name:toupload
-	 	<br>Parameters:
-			<br>Return Type:void
-			<br>Purpose and description:it declare toupload method
-	<li><strong>Database Design</strong>
-		<ul>
+<p>...........................................................................<p>
+<li><strong>Database Design</strong>
+		<ul>			
 			<li>ER Diagram</li>
 			<li>The following per table</li>
 			<li>Purpose of the table</li>
