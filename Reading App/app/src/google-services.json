@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "930330147186",
+    "firebase_url": "https://reading-app-705d4.firebaseio.com",
+    "project_id": "reading-app-705d4",
+    "storage_bucket": "reading-app-705d4.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:930330147186:android:1d778e3d46fe171f4685eb",
+        "android_client_info": {
+          "package_name": "com.readingapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "930330147186-lrijrhhrtuuv5a2dfhv1i0h01cu5epbd.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDTVEWuwDWG4mZUmoQKyKOoNHCPR9XL8DY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "930330147186-lrijrhhrtuuv5a2dfhv1i0h01cu5epbd.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
