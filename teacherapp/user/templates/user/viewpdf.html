@@ -1,0 +1,29 @@
+{% load static %}
+{% load crispy_forms_tags %}
+{% block start %}
+
+<body>
+
+  <h1><b><span class="yellow">Class Work</span></b> </h1>
+
+<table class="container">
+	<thead>
+		<tr>
+			<th><h1>Name</h1></th>
+			<th><h1>PDF Files</h1></th>
+			<th><h1>Clicks</h1></th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td>{{ pdf.name }}</td>
+
+			<!-- After Clicking Read Button PDF will be open -->
+			<td><a href="{{ pdf.pdffile.url }}"> <input type="button" class="button" value="Read"> </a></td>
+		</tr>
+	</tbody>
+</table>
+</body>
+
+</html>
+{% endblock start %}

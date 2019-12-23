@@ -1,0 +1,40 @@
+{% extends "user/index.html" %}
+{% load crispy_forms_tags %}
+{% block start %}
+{% if user.is_authenticated %}
+<div class="content-section col-md-8 col-md-offset-2">
+  <form method="POST" style="border: 1px solid black; margin: 4%; padding:10%; border-radius:1%;">
+    {% csrf_token %}
+    <fieldset class="form-group">
+      {{ form|crispy}}
+    </fieldset>
+    <form method="POST">
+        <table class="container">
+            <thead>
+                <tr>
+                    <th>
+                        <h1>Name</h1>
+                    </th>
+                    <th>
+                        <h1>PDF Files</h1>
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>{{ forms.name }}</td>
+                    <td>{{ forms.pdffile }}</td>
+
+                </tr>
+            </tbody>
+        </table>
+       <center> <button style="background: black; font-size: 2rem; padding:1%;" class="btn btn-outline-info" type="submit"><span class="glyphicon glyphicon-log-in"></span> &nbsp; Upload</button></center>
+        </form>
+
+  </form>
+</div>
+{% else %}
+    <center><h1>Please Log In to Go</h1></center>
+    <center><h1>If you don't have a account, then sign up</h1></center>
+    {% endif %}
+{% endblock start %}

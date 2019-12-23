@@ -9,6 +9,9 @@ from django.core.mail import EmailMultiAlternatives
 from django.template.loader import get_template
 from django.template import Context
 
+from .models import pdf_file
+from .forms import uploadpdf 
+
 
 ##################################################################
 ####################index#######################################
@@ -62,3 +65,19 @@ def Login(request):
             messages.info(request, f'account done not exit plz sign in')
     form = AuthenticationForm()
     return render(request, 'user/login.html', {'form':form,'title':'log in'})
+
+
+    ##### when teacher loged in then he will upload pdf file using this method
+def pdf_up(request):
+    if request.method == 'POST':
+        form = uploadpdf(request.POST, request.FILES)
+        if form.is_valid():
+            form.save()
+            return redirect("pdf_upload_page")
+    else:
+        form = uploadpdf()
+    return render(request, 'user/fileupload.html', {'forms':form})
+
+#def pdf_view(request):
+ #   pdf = pdf_file.objects.all()
+  #  return render(request, 'user/viewpdf.html', {'pdf':pdf } )
